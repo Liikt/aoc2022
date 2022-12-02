@@ -132,6 +132,7 @@ pub fn solve1(input: String) -> usize {
         total += my.score();
         total += my.play(elf).score();
     }
+
     total
 }
 
