@@ -1,4 +1,5 @@
 use day1;
+use day2;
 
 use std::env::args;
 use std::process::exit;
@@ -22,9 +23,13 @@ fn main() {
     match args().nth(1).unwrap().as_str() {
         "all" => {
             day!(day1, "day1");
+            day!(day2, "day2");
         },
         "day1" => {
             day!(day1, "day1");
+        }
+        "day2" => {
+            day!(day2, "day2");
         }
 
         _ => panic!("Invalid day as argument")
