@@ -25,9 +25,7 @@ impl Choice {
             Self::Scissor => 3
         }
     }
-}
 
-impl Choice {
     fn play(self, other: Self) -> Outcome {
         match self {
             Self::Rock => {
