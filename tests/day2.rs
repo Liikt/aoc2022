@@ -1,5 +1,5 @@
 #[cfg(test)]
-mod tests {
+mod day2 {
     use day2::{solve1, solve2};
 
     const INPUT: &str = r#"A Y
