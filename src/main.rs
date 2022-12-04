@@ -1,6 +1,7 @@
 use day1;
 use day2;
 use day3;
+use day4;
 
 use std::env::args;
 use std::process::exit;
@@ -26,6 +27,7 @@ fn main() {
             day!(day1, "day1");
             day!(day2, "day2");
             day!(day3, "day3");
+            day!(day4, "day4");
         },
         "day1" => {
             day!(day1, "day1");
@@ -35,6 +37,9 @@ fn main() {
         }
         "day3" => {
             day!(day3, "day3");
+        }
+        "day4" => {
+            day!(day4, "day4");
         }
 
         _ => panic!("Invalid day as argument")
