@@ -1,14 +1,10 @@
-use day1;
-use day2;
-use day3;
-use day4;
-
 use std::env::args;
 use std::process::exit;
 use std::fs::read_to_string;
 
 macro_rules! day {
     ($day:ident, $day_str:expr) => {
+        use $day;
         println!("{} part 1: {}", $day_str, $day::solve1(
             read_to_string("inputs/".to_owned() + $day_str).unwrap()));
         println!("{} part 2: {}", $day_str, $day::solve2(
@@ -30,6 +26,7 @@ fn main() {
             day!(day4, "day4");
             day!(day5, "day5");
             day!(day6, "day6");
+            day!(day7, "day7");
         },
         "day1" => {
             day!(day1, "day1");
@@ -48,6 +45,9 @@ fn main() {
         }
         "day6" => {
             day!(day6, "day6");
+        }
+        "day7" => {
+            day!(day7, "day7");
         }
 
         _ => panic!("Invalid day as argument")
