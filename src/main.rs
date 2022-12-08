@@ -27,6 +27,7 @@ fn main() {
             day!(day5, "day5");
             day!(day6, "day6");
             day!(day7, "day7");
+            day!(day8, "day8");
         },
         "day1" => {
             day!(day1, "day1");
@@ -48,6 +49,9 @@ fn main() {
         }
         "day7" => {
             day!(day7, "day7");
+        }
+        "day8" => {
+            day!(day8, "day8");
         }
 
         _ => panic!("Invalid day as argument")
