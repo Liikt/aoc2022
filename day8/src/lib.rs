@@ -32,12 +32,12 @@ impl Forest {
 
         // visible from south
         let mut max = vec![-1; self.width];
-        for (y, row) in copy.trees.iter().rev().enumerate() {
+        for (y, row) in copy.trees.iter().enumerate().rev() {
             for (x, col) in row.iter().enumerate() {
                 if col.height as i8 > max[x] {
                     max[x] = col.height as i8;
                 }
-                self.trees[self.height-1-y][x].south = max[x];
+                self.trees[y][x].south = max[x];
             }
         }
 
@@ -55,11 +55,11 @@ impl Forest {
         // visible from west
         for (y, row) in copy.trees.iter().enumerate() {
             let mut max = -1;
-            for (x, col) in row.iter().rev().enumerate() {
+            for (x, col) in row.iter().enumerate().rev() {
                 if col.height as i8 > max {
                     max = col.height as i8;
                 }
-                self.trees[y][self.height-1-x].west = max;
+                self.trees[y][x].west = max;
             }
         }
     }
