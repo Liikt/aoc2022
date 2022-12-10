@@ -198,9 +198,13 @@ pub fn solve2(input: String) -> usize {
                 }
             }
         }
-        // print_state(knots);
+        if false {
+            print_state(knots);
+        }
     }
 
-    // print_visited(&visited);
+    if false {
+        print_visited(&visited);
+    }
     visited.len()
 }
