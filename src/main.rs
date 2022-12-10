@@ -20,15 +20,16 @@ fn main() {
 
     match args().nth(1).unwrap().as_str() {
         "all" => {
-            day!(day1, "day1");
-            day!(day2, "day2");
-            day!(day3, "day3");
-            day!(day4, "day4");
-            day!(day5, "day5");
-            day!(day6, "day6");
-            day!(day7, "day7");
-            day!(day8, "day8");
-            day!(day9, "day9");
+            day!(day1,  "day1");
+            day!(day2,  "day2");
+            day!(day3,  "day3");
+            day!(day4,  "day4");
+            day!(day5,  "day5");
+            day!(day6,  "day6");
+            day!(day7,  "day7");
+            day!(day8,  "day8");
+            day!(day9,  "day9");
+            day!(day10, "day10");
         },
         "day1" => {
             day!(day1, "day1");
@@ -56,6 +57,9 @@ fn main() {
         }
         "day9" => {
             day!(day9, "day9");
+        }
+        "day10" => {
+            day!(day10, "day10");
         }
 
         _ => panic!("Invalid day as argument")
